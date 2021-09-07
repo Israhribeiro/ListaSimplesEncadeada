@@ -40,5 +40,9 @@ public class SLinkedList {
             }
             size += 1;
         }
+
+    public void removeFirst() {
+
+    }
 }
 
