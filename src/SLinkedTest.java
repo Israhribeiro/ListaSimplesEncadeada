@@ -35,6 +35,8 @@ public class SLinkedTest {
 
     @Test
     void testRemoveFirst() {
+        Class sLinkedListClass = SLinkedList.class;
+
         SLinkedList s = new SLinkedList();
         assertEquals("[]", s.toString(), "Deve imprimir []");
         s.addTail("MSP");
@@ -45,7 +47,12 @@ public class SLinkedTest {
         assertEquals("[BOS]", s.toString(), "Deve imprimir [BOS]");
         s.removeFirst();
         assertEquals("[]", s.toString(), "Deve imprimir []");
-        assertThrows(EmptySLinkedList.class, () -> { s.removeFirst(); });
+        assertThrows(sLinkedListClass, () -> { s.removeFirst(); });
     }
 
+
+
 }
+
+
+

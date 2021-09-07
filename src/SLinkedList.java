@@ -1,4 +1,4 @@
-public class SLinkedList {
+public class SLinkedList<head> {
         protected Node head;
         protected Node tail;
 
@@ -41,8 +41,9 @@ public class SLinkedList {
             size += 1;
         }
 
-    public void removeFirst() {
-
-    }
+        public void removeFirst() {
+            Node v = head;
+            head = v.getNext();
+     }
 }
 
