@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.provider.NullAndEmptySource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -35,7 +36,6 @@ public class SLinkedTest {
 
     @Test
     void testRemoveFirst() {
-        Class sLinkedListClass = SLinkedList.class;
 
         SLinkedList s = new SLinkedList();
         assertEquals("[]", s.toString(), "Deve imprimir []");
@@ -47,7 +47,7 @@ public class SLinkedTest {
         assertEquals("[BOS]", s.toString(), "Deve imprimir [BOS]");
         s.removeFirst();
         assertEquals("[]", s.toString(), "Deve imprimir []");
-        assertThrows(sLinkedListClass, () -> { s.removeFirst(); });
+        assertThrows(NullPointerException.class, () -> { s.removeFirst(); });
     }
 
 
